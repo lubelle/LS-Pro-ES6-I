@@ -1,43 +1,43 @@
-var me = 'LambdaSchool';
-
-var you = 'Student';
-
-var numberOfCatsIOwn = 0;
-
-function buyCat() {
+const me = 'LambdaSchool';
+const you = 'Student';
+let numberOfCatsIOwn = 0;
+const buyCat = () => {
   numberOfCatsIOwn++;
-  conosle.log('I now own ' + numberOfCatsIOwn + ' cats!');
+  console.log('I now own ' + numberOfCatsIOwn + ' cats!');
 }
+buyCat();
 
-var favoriteBooks = [
+
+const favoriteBooks = [
   'Captain Underpants',
   'Magic Treehouse',
   'Brown Bear, Brown Bear, What Do You See?',
   'Slaughterhouse 5',
 ];
-
-var likesCaptainUnderpants = function(bookList) {
-  var yes = false;
-  bookList.forEach(function(book) {
+const likesCaptainUnderpants = (bookList) => {
+  let yes = false;
+  bookList.forEach((book) => {
     if (book === 'Captain Underpants') yes = true;
   });
   return yes;
 }
+const result = likesCaptainUnderpants(favoriteBooks);
+console.log(result);
 
-var result = likesCaptainUnderpants();
 
-var sumInput = function() {
-  var total = 0;
-  for (var i = 0; i < arguments.length; i++) {
-    total += arguments[i];
+const sumInput = (...args) => {
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
   }
   return total;
 }
+const sum = sumInput(1, 2, 3, 4, 5);
+console.log(sum);
 
-var sum = sumInput(1, 2, 3, 4, 5);
 
-var add = function(x, x) {
-  return x + x;
+const add = (x, y) => {
+  return x + y;
 }
-
-var sum = add(5, 5);
+const total = add(5, 5);
+console.log(total);
